@@ -1,0 +1,23 @@
+{
+  "name": "calculator-state-manager",
+  "version": "0.0.1",
+  "description": "A state manager for calaculators",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chatissantos/calculator-state-manager.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript"
+  ],
+  "author": "Chatis Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chatissantos/calculator-state-manager/issues"
+  },
+  "homepage": "https://github.com/chatissantos/calculator-state-manager#readme"
+}

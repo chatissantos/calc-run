@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chatissantos/calculator-state-manager.git"
+    "url": "git+https://github.com/chatissantos/calc-run"
   },
   "keywords": [
     "javascript",

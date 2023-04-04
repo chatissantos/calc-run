@@ -76,10 +76,10 @@ Here's an example of using the calc-run library in a React component:
 
 ```
 import React, { useState } from 'react';
-import { CalculatorState, createCalculator, Operator } from 'calc-run';
+import { createCalculator } from 'calc-run';
 
 function MiniCalc() {
-    const [state, setState] = useState<CalculatorState>();
+    const [state, setState] = useState();
     const calculator = useMemo(() => createCalculator({ updateCallBack: setState }), []);
 
     if (!state) {
@@ -93,8 +93,8 @@ function MiniCalc() {
             <button onClick={() => calculator.handleKey('1')}>1</button>
             <button onClick={() => calculator.handleKey('2')}>2</button>
             <button onClick={() => calculator.handleKey('3')}>3</button>
-            <button onClick={() => calculator.handleKey(Operator.addition)}>Plus</button>
-            <button onClick={() => calculator.handleKey(Operator.subtraction)}>Minus</button>
+            <button onClick={() => calculator.handleKey('+')}>Plus</button>
+            <button onClick={() => calculator.handleKey('-')}>Minus</button>
             <button onClick={() => calculator.handleKey('=')}>Equals</button>
         </div>
     );
@@ -103,4 +103,4 @@ function MiniCalc() {
 
 ## Conclusion
 
-The calculator state management library provides an easy way to manage the state of a calculator in any front-end library of your choice. With this library, you can focus on building the UI for your calculator, while the library takes care of the state management.
+The calculator state management library provides an easy way to manage the state of a calculator in any front-end library of your choice. With this library, you can focus on building the UI for your calculator, while the calc-run takes care of the state management.

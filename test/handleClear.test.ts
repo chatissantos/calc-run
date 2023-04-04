@@ -1,11 +1,11 @@
 import {describe, expect, test, vi} from "vitest";
-import {State} from "./State";
-import handleClear from "./handleClear";
+import {CalculatorInternalState} from "../src/State";
+import handleClear from "../src/handleClear";
 
 describe('Handle Clear', () => {
     const updateCallBack = vi.fn();
     test('should clear one character', () => {
-        const state: State = {
+        const state: CalculatorInternalState = {
             isPartiallyCleared: false,
             updateCallBack,
             workingStatement: '1'
@@ -14,7 +14,7 @@ describe('Handle Clear', () => {
         expect(state.workingStatement).toEqual('');
     });
     test('should completely clear if ws has been evaluated', () => {
-        const state: State = {
+        const state: CalculatorInternalState = {
             isPartiallyCleared: false,
             updateCallBack,
             workingStatement: '5*5=25'
@@ -23,7 +23,7 @@ describe('Handle Clear', () => {
         expect(state.workingStatement).toEqual('');
     });
     test('should partially clear working number then clear entire string', () => {
-        const state: State = {
+        const state: CalculatorInternalState = {
             isPartiallyCleared: false,
             updateCallBack,
             workingStatement: '2*442'

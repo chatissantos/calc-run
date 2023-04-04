@@ -6,10 +6,10 @@ import handleClear from "./handleClear";
 import handleOperator from "./handleOperator";
 import handleNumber from "./handleNumber";
 import getOutput from "./getOutput";
-import {State} from "./State";
+import {CalculatorInternalState} from "./State";
 
-export default function handleKey(this: State, key: typeof Keys[number]) {
-    const { workingStatement, updateCallBack } = this;
+export default function handleKey(this: CalculatorInternalState, key: typeof Keys[number]) {
+    const { updateCallBack } = this;
     if(key !== 'c') {
         this.isPartiallyCleared = false;
     }
@@ -36,5 +36,5 @@ export default function handleKey(this: State, key: typeof Keys[number]) {
             handleNumber.bind(this)(key);
             break;
     }
-    updateCallBack({ws: workingStatement, output: getOutput.bind(this)()});
+    updateCallBack({statement: this.workingStatement, output: getOutput.bind(this)()});
 }

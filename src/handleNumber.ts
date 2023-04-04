@@ -1,8 +1,8 @@
 import Keys from "./Keys";
 import hasBeenEvaluated from "./hasBeenEvaluated";
-import {State} from "./State";
+import {CalculatorInternalState} from "./State";
 
-export default function handleNumber(this: State, value: typeof Keys[number]) {
+export default function handleNumber(this: CalculatorInternalState, value: typeof Keys[number]) {
     const { workingStatement } = this;
     if(hasBeenEvaluated(workingStatement)) {
         this.workingStatement = value;

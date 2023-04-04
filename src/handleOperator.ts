@@ -1,9 +1,9 @@
 import {Operator} from "./Operators";
 import endsWithOperator from "./endsWithOperator";
 import hasBeenEvaluated from "./hasBeenEvaluated";
-import {State} from "./State";
+import {CalculatorInternalState} from "./State";
 
-export default function handleOperator(this: State, key: Operator) {
+export default function handleOperator(this: CalculatorInternalState, key: Operator) {
     const { workingStatement } = this;
     if (workingStatement.length >= 1) {
         if(hasBeenEvaluated(workingStatement)) {

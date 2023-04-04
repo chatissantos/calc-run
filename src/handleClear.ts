@@ -1,9 +1,9 @@
 import containsOperator from "./containsOperator";
 import clearWorkingNumber from "./clearWorkingNumber";
 import hasBeenEvaluated from "./hasBeenEvaluated";
-import {State} from "./State";
+import {CalculatorInternalState} from "./State";
 
-export default function handleClear(this: State) {
+export default function handleClear(this: CalculatorInternalState) {
     const {workingStatement, isPartiallyCleared} = this;
     if (hasBeenEvaluated(workingStatement)) {
         this.workingStatement = '';

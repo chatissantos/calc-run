@@ -1,7 +1,7 @@
-import {State} from "./State";
 import {isOperator} from "./Operators";
+import {CalculatorInternalState} from "./State";
 
-export default function clearWorkingNumber(this: State) {
+export default function clearWorkingNumber(this: CalculatorInternalState) {
     const { workingStatement } = this;
     let l = workingStatement.length - 1;
     while (l >= 0 && !isOperator(workingStatement.charAt(l))) {

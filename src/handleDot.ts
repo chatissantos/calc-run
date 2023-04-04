@@ -1,7 +1,7 @@
 import hasBeenEvaluated from "./hasBeenEvaluated";
-import {State} from "./State";
+import {CalculatorInternalState} from "./State";
 
-export default function handleDot(this: State) {
+export default function handleDot(this: CalculatorInternalState) {
     const { workingStatement } = this;
     if (workingStatement.includes('.')) {
         return;

@@ -1,10 +1,10 @@
 import {ADDITION_OPERATORS, isOperator} from "./Operators";
-import {State} from "./State";
 import hasBeenEvaluated from "./hasBeenEvaluated";
 import lastChar from "./lastChar";
 import endsWithOperator from "./endsWithOperator";
+import {CalculatorInternalState} from "./State";
 
-export default function getOutput(this: State): string {
+export default function getOutput(this: CalculatorInternalState): string {
     const { defaultZeroText, isPartiallyCleared, workingStatement } = this;
     const defaultValue = defaultZeroText || '0';
     if (isPartiallyCleared || !workingStatement.length) {
